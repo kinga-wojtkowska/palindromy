@@ -12,8 +12,8 @@ def palindrome(x):
     print(y)
     print(z)
     if y == z:
-        print("Podane przez Ciebie wyrażenie to palindrom")
+        return True
     else:
-        print("Podane przez Ciebie wyrażenie nie jest palindromem")
+        return False
 
-palindrome(x)        
+print(palindrome(x))
