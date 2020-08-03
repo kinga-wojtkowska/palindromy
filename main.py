@@ -1,16 +1,15 @@
 x = input("Czy to palindrom? Podaj tekst: ")
 def palindrome(x):
-    x_lower = str(x.lower())
-    x_clear = ''.join( c for c in x_lower if  c not in ';:!*,.? ' )  
-        
-    print(x_clear)
-    for i in x_clear:
-        y = [i for i in x_clear]
-        z = [i for i in reversed(x_clear)]
-    print(y)
-    print(z)
-    
-    if y == z:
+    x_clear = []
+    for char in x.lower():
+        if char.isalnum() == True:
+            x_clear.append(char)
+        else:
+            pass
+
+    x_reversed = x_clear[::-1]
+   
+    if x_clear == x_reversed:
         return True
     else:
         return False
